@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+    margin: 100px;
+}
+
+.buttons-container {
+    display:inline-grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 5px;
+    
+}
+
