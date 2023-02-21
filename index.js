@@ -4,9 +4,20 @@
 const container = document.querySelector('.buttons-container');
 let enteredValue = document.getElementById('enter_value');
 let finalAnswer = document.getElementById('calculated-answer');
+let operation = document.getElementById('operation');
 
 
  const signs = ['+', '-', 'x', '÷'];
+
+ for(let i = 0; i <signs.length; i++){
+  if(signs[i] === '+'){
+
+    operation.addEventListener('click', ()=>{
+      
+      finalAnswer.appendChild()
+    })
+  }
+ }
 
  let firstValue = '';
  let operend = '';
@@ -16,7 +27,7 @@ let finalAnswer = document.getElementById('calculated-answer');
 
  for(let i =0; i<10; i++){
   const button = document.createElement('button');
-  button.innerHTML = (i%3 === 0 && i !== 0) ? `${signs[k]}`:`${i}`;
+  button.innerHTML = (i%3 === 0 && i !== 0) ? `${signs[k]}`:`${i}`
   if(signs.includes(button.innerHTML)){
     button.setAttribute('type', 'operator');
   }
@@ -34,39 +45,6 @@ let finalAnswer = document.getElementById('calculated-answer');
     finalAnswer.value = eval(`${firstValue} ${operend} ${secondValue}`);
  })
  container.appendChild(button);
- }
-// const add = (e)=>{
-//     const firstValue = enteredValue.innerHTML;
-//     const result = enteredValue+ e.target.value;
-//     display.innerHTML = result;
-// };
+ };
 
-// const subtract = (e)=>{
-//     const result = e.target.value - e.target.value;
-//     display.innerHTML = result;
-// };
-
-// const multiply = (e)=>{
-//     const result = e.target.value * e.target.value;
-//     display.innerHTML = result;
-// };
-
-// const divide = (e)=>{
-//     const result = e.target.value / e.target.value;
-//     display.innerHTML = result;
-// };
-
-
-
-// button.addEventListener('click', (e)=>{
-//     if(!enteredValue.value){
-//       firstValue = Number(e.target.innerHTML);
-//     };
-
-//     if(e.target.innerHTML === signs[k] ){
-//       finalAnswer.value = Number(firstValue)+Number(e.target.innerHTML);
-//     }
-//     enteredValue.value = firstValue;
-    
-//   })
-//   container.appendChild(button);
+ 
